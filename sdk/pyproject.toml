@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wearable-platform-sdk"
+version = "0.1.0"
+description = "Wearable device interfaces and pupil-stream utilities"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+hardware = ["bleak", "opencv-python", "onnxruntime"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
